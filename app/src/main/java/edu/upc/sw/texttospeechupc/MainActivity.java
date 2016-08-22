@@ -1,10 +1,12 @@
 package edu.upc.sw.texttospeechupc;
 
+import android.app.Activity;
 import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -17,9 +19,11 @@ import android.widget.Spinner;
 import android.widget.Toast;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
+import android.provider.Settings;
 
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.ServiceConfigurationError;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
@@ -207,11 +211,23 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            try {
+                //startService(new Intent(Settings.Secure.TTS_DEFAULT_SYNTH));
+                startActivityForResult(new Intent(Settings.ACTION_SEARCH_SETTINGS), 0);
+            }
+            catch (ActivityNotFoundException ex){
+                ex.printStackTrace();
+            }
+        }
+
+        if(id == R.id.acerca_de){
+            Intent intent =  new Intent(MainActivity.this, AcercaDe.class);
+            MainActivity.this.startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
     }
+
 
     @Override
     protected void onDestroy() {

@@ -22,4 +22,12 @@
     <string name="speech_input_phrase">Di la frase, habla fuerte y claro</string>
     <string name="stt_not_supported">Your Device Does not Support This!</string>
     <string name="acerca_de">Acerca de</string>
+    <string name="title_activity_acerca_de">AcercaDe</string>
+    <string name="upc">Universidad Politécnica del Centro</string>
+    <string name="upc1">Desarrollado por los alumnos:</string>
+    <string name="mateo">Mateo Javier Aguilar Carrillo</string>
+    <string name="itzel">Itzel Escudero Pimienta</string>
+    <string name="software">De la carrera de Ing. en Software</string>
+    <string name="agra">Agradecimientos:</string>
+    <string name="maestro">Mtro. Martín Guadalupe Chac Kantún</string>
 </resources>
