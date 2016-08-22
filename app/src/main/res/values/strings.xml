@@ -1,4 +1,25 @@
 <resources>
     <string name="app_name">TextToSpeechUPC</string>
     <string name="action_settings">Settings</string>
+
+    <string-array name="language_spinner">
+        <item>English</item>
+        <item>Spanish</item>
+    </string-array>
+
+    <string-array name="pitch_Spinner">
+        <item>Normal</item>
+        <item>Higher</item>
+        <item>Lower</item>
+    </string-array>
+
+    <string-array name="speed_Spinner">
+        <item>Normal</item>
+        <item>High</item>
+        <item>Low</item>
+    </string-array>
+
+    <string name="speech_input_phrase">Di la frase, habla fuerte y claro</string>
+    <string name="stt_not_supported">Your Device Does not Support This!</string>
+    <string name="acerca_de">Acerca de</string>
 </resources>
